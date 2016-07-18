@@ -1,0 +1,22 @@
+{
+    "name": "quangthinh/yii2-setting",
+    "description": "Yii2 Setting module",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "Apache-2.0",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Quang Thịnh",
+            "email": "quangthinh.dico@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "quangthinh\\yii\\setting\\": ""
+        }
+    }
+}
