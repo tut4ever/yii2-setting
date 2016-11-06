@@ -41,15 +41,22 @@ class Model extends \yii\base\Model
         return $this->attributes();
     }
 
+    /**
+     * validate rules
+     */
     public function rules()
     {
         return [$this->saveFields(), 'string'];
     }
 
+    /**
+     * Update setting data in model
+     */
     public function update()
     {
         $saveFields = $this->saveFields();
         $setting = $this->setting();
+        
         $section = $this->section();
         foreach ($saveFields as $field) {
             $setting[$section . $field] = $this->$field;
