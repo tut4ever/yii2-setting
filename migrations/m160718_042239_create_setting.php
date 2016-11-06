@@ -9,17 +9,14 @@ class m160718_042239_create_setting extends Migration
     {
         $this->createTable('{{%setting}}', [
             'key' => $this->string()->notNull(),
-            'section' => $this->string()->notNull(),
             'data' => $this->text(),
-            'autoload' => $this->boolean()->defaultValue(true),
         ]);
 
-        $this->addPrimaryKey('pk_setting', '{{%setting}}', ['key', 'section']);
+        $this->addPrimaryKey('pk_setting', '{{%setting}}', ['key']);
     }
 
     public function safeDown()
     {
         $this->dropTable('{{%setting}}');
     }
-
 }
