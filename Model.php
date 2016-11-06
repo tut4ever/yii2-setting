@@ -39,7 +39,7 @@ class Model extends \yii\base\Model
         $setting = $className::setting();
         $section = $className::section();
         foreach ($fields as $field) {
-            $this->$field = $setting[$section . $field];
+            $this->$field = $setting[$section . '#'. $field];
         }
     }
 
@@ -75,7 +75,7 @@ class Model extends \yii\base\Model
         
         $section = $className::section();
         foreach ($saveFields as $field) {
-            $setting[$section . $field] = $this->$field;
+            $setting[$section . '#'. $field] = $this->$field;
         }
     }
 }
