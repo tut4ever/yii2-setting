@@ -10,10 +10,6 @@ class m160718_042239_create_setting extends Migration
         $this->createTable('{{%setting}}', [
             'key' => $this->string()->notNull(),
             'data' => $this->text(),
-<<<<<<< HEAD
-=======
-            'cache' => $this->boolean()->defaultValue(true),
->>>>>>> e34bebc1faa9a699d49b4aa58abea5494f0af0ae
         ]);
 
         $this->addPrimaryKey('pk_setting', '{{%setting}}', ['key']);

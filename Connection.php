@@ -140,7 +140,8 @@ class Connection extends Component implements \ArrayAccess
                 ->insert($this->tableName, [
                     'key' => $offset,
                     'data' => $data,
-                ]);
+                ])
+            ->execute();
         }
 
         $this->cache->delete($this->cachePrefix . $offset);
