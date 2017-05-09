@@ -52,11 +52,7 @@ class Model extends \yii\base\Model
      */
     public function rules()
     {
-        /**
-         * @var $className Model
-         */
-        $className = get_class($this);
-        return [$className::saveFields(), 'string'];
+        return [$this->saveFields(), 'string'];
     }
 
     /**
