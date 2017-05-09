@@ -3,7 +3,7 @@ Yii2 Setting
 
 Chạy migrations
 ```
-yii migrate -p=@quangthinh/yii2-setting/migrations
+yii migrate -p=@vendor/quangthinh/yii2-setting/migrations
 ```
 
 Thêm quangthinh\yii\setting\Connection như là 1 component của yii2
