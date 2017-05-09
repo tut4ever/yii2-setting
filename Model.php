@@ -10,7 +10,6 @@ namespace quangthinh\yii\setting;
 
 
 use Yii;
-use yii\db\ActiveRecord;
 use yii\helpers\StringHelper;
 
 class Model extends \yii\base\Model
