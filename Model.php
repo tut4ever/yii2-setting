@@ -38,7 +38,7 @@ class Model extends \yii\base\Model
         $setting = $className::setting();
         $section = $className::section();
         foreach ($fields as $field) {
-            $this->$field = $setting[$section . '#'. $field];
+            $this->$field = $className::getValue($field);
         }
     }
 
@@ -70,7 +70,17 @@ class Model extends \yii\base\Model
         
         $section = $className::section();
         foreach ($saveFields as $field) {
-            $setting[$section . '#'. $field] = $this->$field;
+            $setting[$className::settingName($field)] = $this->$field;
         }
+    }
+
+    public static function settingName($field) {
+        $class = self::className();
+        return $class::section() . '#' . $field;
+    }
+
+    public static function getValue($field) {
+        $class = self::className();
+        return $setting[$class::settingName($field)];
     }
 }
